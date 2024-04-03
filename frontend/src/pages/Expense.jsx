@@ -33,7 +33,7 @@ export default function Expense() {
     const getExpenses = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3777/expenses/getAllExpenses/${groupId}`
+          `https://csci4177-final-api.onrender.com/expenses/getAllExpenses/${groupId}`
         );
         console.log(response.data);
         setExpenses(response.data); // Assuming the API returns an array of expenses
@@ -85,14 +85,14 @@ export default function Expense() {
       if (isEditing && editingExpenseId) {
         // Update the expense
         await axios.put(
-          `http://localhost:3777/expenses/editExpense/${editingExpenseId}`,
+          `https://csci4177-final-api.onrender.com/expenses/editExpense/${editingExpenseId}`,
           expenseData
         );
         setSuccessMessage("Expense updated successfully!");
       } else {
         // Add a new expense
         await axios.post(
-          `http://localhost:3777/expenses/addExpense/${groupId}`,
+          `https://csci4177-final-api.onrender.com/expenses/addExpense/${groupId}`,
           expenseData
         );
         setSuccessMessage("Expense added successfully!");
@@ -121,7 +121,7 @@ export default function Expense() {
 
     try {
       await axios.delete(
-        `http://localhost:3777/expenses/deleteExpense/${expenseId}`
+        `https://csci4177-final-api.onrender.com/expenses/deleteExpense/${expenseId}`
       );
       setFetchTrigger((f) => !f); // Trigger expenses re-fetch
     } catch (error) {
@@ -139,7 +139,7 @@ export default function Expense() {
   const handleOpenExpense = async (expenseId) => {
     try {
       const response = await axios.get(
-        `http://localhost:3777/expenses/getParticipants/${expenseId}`
+        `https://csci4177-final-api.onrender.com/expenses/getParticipants/${expenseId}`
       );
       
       setParticipants(response.data); // Assuming the API returns an array of participants
@@ -210,7 +210,7 @@ export default function Expense() {
       //Send to database
       try {
         await axios.put(
-          `http://localhost:3777/expenses/editParticipants/${currentExpenseID}`, participants);
+          `https://csci4177-final-api.onrender.com/expenses/editParticipants/${currentExpenseID}`, participants);
         setSuccessMessage("Expense updated successfully!");
 
         // Common cleanup
