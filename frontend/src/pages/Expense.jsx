@@ -251,7 +251,7 @@ export default function Expense() {
 
             <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
               <form onSubmit={handleSubmit} className="expense-form">
-                <label>
+                <label className="text-white">
                   Description:
                   <input
                     type="text"
@@ -260,7 +260,7 @@ export default function Expense() {
                     onChange={(e) => setDescription(e.target.value)}
                   />
                 </label>
-                <label>
+                <label className="text-white">
                   Amount:
                   <input
                     type="number"
@@ -269,7 +269,7 @@ export default function Expense() {
                     onChange={(e) => setAmount(e.target.value)}
                   />
                 </label>
-                <label>
+                <label className="text-white">
                   Date:
                   <input
                     type="date"
@@ -281,7 +281,7 @@ export default function Expense() {
                 <div className="container-fluid">
                   <div className="row">
                     <div className="col-sm-6">
-                      <label className="checkbox-label">Split Equally:</label>
+                      <label className="checkbox-label text-white">Split Equally:</label>
                     </div>
                     <div className="col-sm">
                       <input
