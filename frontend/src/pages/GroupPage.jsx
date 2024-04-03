@@ -52,30 +52,30 @@ export default function GroupPage() {
             className="card"
             onClick={() => navigate(`/${userId}/${groupId}/chat`)}
           >
-            <div className="icon">
+            <div className="icon text-white">
               <IoChatboxEllipsesOutline />
             </div>
-            <div className="text">Chat</div>
+            <div className="text text-white">Chat</div>
           </div>
 
           <div
             className="card"
             onClick={() => navigate(`/${userId}/${groupId}/expenses`)}
           >
-            <div className="icon">
+            <div className="icon text-white">
               <AiOutlineDollarCircle />
             </div>
-            <div className="text">Expenses</div>
+            <div className="text text-white">Expenses</div>
           </div>
 
           <div
             className="card"
             onClick={() => navigate(`/${userId}/${groupId}/members`)}
           >
-            <div className="icon">
+            <div className="icon text-white">
               <LiaUserFriendsSolid />
             </div>
-            <div className="text">Members</div>
+            <div className="text text-white">Members</div>
           </div>
         </div>
         <button className="delete-btn" onClick={handleRemoveGroup}>
