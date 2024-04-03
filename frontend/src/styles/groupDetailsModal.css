@@ -1,0 +1,59 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}
+
+.modal {
+  background-color: #d6d6d6;
+  padding: 20px;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 10%;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1051;
+}
+
+.modal input,
+textarea {
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.buttons button[type="submit"] {
+  background-color: #8d8dda;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button[type="button"] {
+  background-color: #a80000;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,115 @@
+body,
+html {
+  height: 100%;
+  background-color: #000235;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.boy-img,
+.girl-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  background-color: #eeeeee;
+  color: #000235;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  flex: 0 1 400px;
+}
+
+#appName {
+  font-size: 100px;
+  color: #eeeeee;
+}
+
+.signup-container h1 {
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.half-width-input {
+  display: flex;
+}
+
+.half-width-input input[type="text"] {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.half-width-input input[type="text"]:last-child {
+  margin-right: 0;
+}
+
+#signup-form button {
+  background-color: #8d8dda;
+  color: #000235;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#signup-form button:hover {
+  background-color: #8282e3;
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #aad9d9;
+  text-decoration: none;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+input[type="email"],
+input[type="password"],
+.half-width-input input[type="text"] {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  #appName {
+    font-size: 0%;
+  }
+  .boy-img,
+  .girl-img {
+    width: 0;
+    height: 0;
+  }
+}

@@ -1,0 +1,97 @@
+/* General adjustments for better spacing and layout */
+.mother-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 40px; /* Adds space between child elements */
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; /* Ensures consistent spacing in all directions */
+  padding: 20px 70px 20px 20px; /* Top, Right, Bottom, Left */
+  width: 100%; /* Full width to utilize the space */
+}
+
+.card {
+  cursor: pointer; /* Indicates the elements are clickable */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smoothens the hover effect */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhances shadow for a "lifted" effect */
+}
+
+.delete-btn {
+  display: inline-block; /* Ensures the button is properly aligned and able to apply padding/margin */
+  align-self: center; /* Keeps the button centered */
+  padding: 10px 20px; /* Adds space inside the button */
+  font-size: 1rem; /* Sets a readable font size */
+  color: white; /* Text color */
+  background-color: #d32f2f; /* Button color */
+  border: 2px solid transparent; /* Prepares the border for the hover effect */
+  border-radius: 5px; /* Rounds the corners of the button */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate it's clickable */
+  text-decoration: none; /* Removes underlines if it's an <a> tag */
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease; /* Smoothens transitions */
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  background-color: #f44336; /* Lightens the button on hover/focus for feedback */
+  border-color: #fff; /* Changes border color for a visual effect */
+  transform: translateY(-2px); /* Slightly raises the button */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Enhances shadow for a "lifted" effect */
+}
+
+.group-name {
+  font-size: 2.8rem; /* Larger font size for prominence */
+  color: #4caf50; /* A vibrant color for attention, but feel free to choose what fits your design */
+  font-weight: 600; /* Semi-bold for better readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds depth and contrast, improving legibility */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Ensures the name is centered */
+  transition: transform 0.3s ease; /* Smoothens the hover effect */
+}
+
+.group-name:hover {
+  transform: scale(
+    1.05
+  ); /* Slightly enlarges the name on hover for interactive feedback */
+  color: #66bb6a; /* Lightens the color on hover for a subtle effect */
+}
+
+/* Enhances icon and text sizes for better readability and touchability on mobile */
+.plus-icon,
+.icon {
+  font-size: 5rem; /* Larger icons */
+}
+
+.text {
+  font-size: 2rem; /* Larger text */
+  margin-top: 0.5rem; /* Reduces space above the text for tighter grouping */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .dashboard {
+    justify-content: space-around; /* Adjusts alignment for smaller screens */
+  }
+
+  .group-name,
+  .delete-btn {
+    margin-left: 0; /* Removes left margin to center content */
+    margin-right: 0; /* Ensures content is centered */
+  }
+}

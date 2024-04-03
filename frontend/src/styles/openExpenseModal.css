@@ -1,0 +1,68 @@
+/* Author: Lawrence Jordan */
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+  
+/* Modal Content Box */
+.modal-content {
+    background-color: rgba(40, 48, 85, 0.773);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.participant-card {
+    background-color: rgba(40, 48, 85, 0.773);
+    width: auto;
+    height: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+  
+.close-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap; /* Keep the button text on one line */
+    width: min-content;
+    margin: 5px;
+}
+
+.submit-button, .edit-button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap; /* Keep the button text on one line */
+    width: min-content;
+    margin: 5px;
+}
+
+.percentage-input {
+    color: black;
+    width: 15%;
+}

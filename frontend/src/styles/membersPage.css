@@ -1,0 +1,47 @@
+.member-name {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    margin-right: 145px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.box {
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    flex-direction: column;
+
+}
+
+.title1 {
+    font-size: 1.2rem;
+    color: #74fafa;
+}
+
+
+
+@media (max-width: 768px) {
+    .group-name {
+        margin-left: 50px;
+        text-align: start;
+        font-size: 2.5rem;
+        color: aliceblue;
+    }
+
+    .title1 {
+        margin-left: 50px;
+        text-align: start;
+        font-size: 1.2rem;
+        color: #74fafa;
+
+    }
+
+
+}

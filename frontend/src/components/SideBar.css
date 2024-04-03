@@ -1,0 +1,81 @@
+/* Import a Google font, you can choose another if you like */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.sidebar {
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #2C3E50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  transition: width 0.3s;
+  z-index: 1000; /* Make sure it's above other content */
+}
+
+.sidebar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  align-self: center; /* Center the profile image */
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+  position: absolute;
+  left: -25px;
+  top: 20px;
+  background: #2C3E50;
+  width: 25px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  width: 100%;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:hover {
+  background-color: #34495e;
+}
+
+.menu-item svg {
+  margin-right: 10px;
+}
+
+.menu-label {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.bottom-item {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Adjust spacing and font size for menu items */
+.menu-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.menu-item-name {
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.active {
+  background-color: #34495e;
+}

@@ -1,0 +1,8 @@
+.notification-container {
+    margin-right: 400px; 
+
+    @media (max-width: 768px) {
+        margin-right: 0; 
+        width: 80%;
+    }
+}

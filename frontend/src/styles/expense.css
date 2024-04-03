@@ -1,0 +1,171 @@
+.dashboard {
+    display:flex;
+    color: white;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+  }
+ 
+ 
+   .card {
+    background-color: rgba(40, 48, 85, 0.773);
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 calc(20% - 20px);
+    position: relative;
+  }
+   .card:hover {
+    transform: translateY(-10px);
+  }
+   .plus-icon {
+    font-size: 4.5rem;
+    color: #000235;
+    font-weight: bold;
+  }
+   .text {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+  }
+
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+  }
+
+  .success-message {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 50%; /* Center the element relative to the container */
+    transform: translateX(-50%); /* Shift it back to truly center it */
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 12px;
+    border-radius: 4px;
+    z-index: 1050; /* Ensure it's above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the text */
+    min-width: 200px; /* Adjust width as needed */
+    animation: fadeInOut 3s ease forwards;
+  }
+  
+/* Common styles for icons */
+.edit-expense, .delete-expense {
+    /* Semi-transparent white for visibility */
+    border-radius: 50%; /* Circular shape */
+    width: 32px; /* Fixed size for consistency */
+    height: 32px; /* Fixed size for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Positioning relative to their parent .expense-info */
+    cursor: pointer; /* Cursor pointer for interactivity */
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .edit-expense:hover, .delete-expense:hover {
+    background-color: rgba(255, 255, 255, 1); /* Solid white on hover for emphasis */
+  }
+  
+  /* Positioning the edit icon */
+  .edit-expense {
+    top: 10px;
+    left: 10px; /* Adjusted to avoid overlapping with the delete icon */
+  }
+  
+  /* Positioning the delete icon */
+  .delete-expense {
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Icon adjustments for better visibility and aesthetics */
+  .edit-icon, .delete-icon {
+    fill: #4a5568; /* Icon color for contrast against the button background */
+    width: 40px; /* Icon size */
+    height: 40px; /* Icon size */
+  }
+  
+
+ 
+  .add-expense{
+    /* Ensure consistent sizing for the add expense card */
+    min-height: 150px; /* Example height, adjust as needed */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+ 
+ 
+  @media (max-width: 768px) {
+    .card {
+      flex: 0 1 calc(50% - 20px); /* Half width on medium screens */
+    }
+  }
+   @media (max-width: 480px) {
+    .card {
+      flex: 0 1 100%; /* Full width on small screens */
+    }
+  }
+ 
+ 
+  .expenses-header {
+    width: 100%; /* Ensure the container spans the full width */
+    text-align: center; /* If you want the title centered */
+  }
+   .full-width-line {
+    border: 0; /* Remove default border */
+    height: 2px; /* Thickness of the line */
+    background-color: #EEEDE7; /* Line color */
+    width: 100vw; /* Viewport Width: makes the line span the full width of the viewport */
+    margin-left: calc(-50vw + 50%); /* Center the line if inside a container with padding/margin */
+  }
+ 
+ 
+ .expense-info {
+  background-color: 0 8px 16px rgba(0, 0, 0, 0.3); /* Light background for better readability */
+  color: #333; /* Dark text for contrast */
+  border-radius: 12px; /* Soft rounded corners for a modern look */
+  box-shadow: 0 5px 15px #ffff(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 15px; /* Adequate padding for content spacing */
+  display: flex;
+  flex-direction: column; /* Stack the information vertically */
+  gap: 8px; /* Space between items */
+  position: relative; /* Needed for absolute positioning of icons */
+  transition: box-shadow 0.2s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+.expense-info:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow for a "pop" effect */
+}
+
+   .expense-info > div:first-child {
+    grid-column: 1 / -1; /* Make the description span all columns */
+    font-size: 18px; /* Larger font size for emphasis */
+    color: #4CAF50; /* Darker text for contrast */
+    font-weight: 500; /* Medium font weight */
+  }
+   .expense-info > div:not(:first-child) {
+    font-size: 16px; /* Standard font size for details */
+    color: #4CAF50; /* Slightly lighter text for subtlety */
+  }
+   .expense-info > div:nth-child(2) {
+    justify-self: end; /* Align amount to the right */
+    color: #4CAF50; /* Green for positive financial numbers */
+  }
+   .expense-info > div:nth-child(3) {
+    grid-column: 2 / 3; /* Position the date on the second column */
+    color: #4CAF50; /* Grey for metadata-like information */
+  }
+ 
